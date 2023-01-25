@@ -1,0 +1,97 @@
+$font: "Montserrat", sans-serif;
+
+/* Colors */
+$black: #171921;
+$white: #FFFFFF;
+
+$teal-50: #F2F9F9;
+$teal-100: #D7ECEF;
+$teal-200: #B8DCE2;
+$teal-300: #88C5CE;
+$teal-400: #93d7d9;
+$teal-500: #399FAE;
+$teal-600: #31858C;
+$teal-700: #10787B;
+$teal-800: #285e61;
+$teal-900: #234e52;
+
+$gray-10: #FAFCFE;
+$gray-50: #F2F7FD;
+$gray-100: #E7EEF9;
+$gray-200: #D1DDF4;
+$gray-300: #AFBEDF;
+$gray-400: #8C9BC0;
+$gray-500: #d0d0d6;
+$gray-600: #465481;
+$gray-700: #81818b;
+$gray-800: #6e6e77;
+$gray-900: #121A48;
+
+$orange-100: #FFF8E5;
+$orange-200: #FFE5A3;
+$orange-300: #FFD466;
+$orange-400: #ffc201;
+$orange-500: #FFB700;
+$orange-600: #DB9400;
+$orange-700: #f19a00;
+$orange-800: #e38f00;
+$orange-900: #d58300;
+
+$red-100: #FFE5DA;
+$red-200: #FFB89B;
+$red-300: #FF4956;
+$red-400: #fc8181;
+$red-500: #f56565;
+$red-600: #e53e3e;
+$red-700: #c53030;
+$red-800: #9b2c2c;
+$red-900: #742a2a;
+
+$green-100: #D0FCD4;
+$green-200: #73F196;
+$green-300: #1BD173;
+$green-400: #68d391;
+$green-500: #48bb78;
+$green-600: #38a169;
+$green-700: #2f855a;
+$green-800: #276749;
+$green-900: #22543d;
+
+$blue-100: #D2FDFE;
+$blue-200: #86EBFD;
+$blue-300: #41ABFC;
+$blue-400: #63b3ed;
+$blue-500: #4299e1;
+$blue-600: #3182ce;
+$blue-700: #2b6cb0;
+$blue-800: #2c5282;
+$blue-900: #2a4365;
+
+$purple-100: #EDE6FA;
+$purple-200: #BCACE1;
+$purple-300: #6F609E;
+$purple-400: #b794f4;
+$purple-500: #9f7aea;
+$purple-600: #805ad5;
+$purple-700: #6b46c1;
+$purple-800: #553c9a;
+$purple-900: #44337a;
+
+/* Shadows */
+$shadow: 0px 2px 4px rgba(18, 26, 72, 0.08);
+$shadow-md: 0px 3px 8px rgba(18, 26, 72, 0.16);
+$shadow-lg: 0px 2px 24px rgba(18, 26, 72, 0.08), 0px 0px 2px rgba(18, 26, 72, 0.08);
+$shadow-xl: 0px 0px 24px rgba(18, 26, 72, 0.16), 0px 0px 2px rgba(18, 26, 72, 0.08);
+
+/* Border radius */
+$rounded-sm: 4px;
+$rounded-md: 8px;
+$rounded-lg: 16px;
+$rounded-xl: 24px;
+
+/* Media */
+$xl: 1194px;
+$lg: 992px;
+$md: 767px;
+$sm: 640px;
+$xs: 360px;

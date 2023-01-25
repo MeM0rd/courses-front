@@ -1,0 +1,16 @@
+@import "@/vars.scss";
+
+.nav-bar {
+  background-color: $orange-500;
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+}
+
+.heading {
+  font-size: 50px;
+  line-height: 62px;
+  color: $black;
+}

@@ -1,0 +1,47 @@
+@import "@/vars.scss";
+
+.auth-card__header {
+  text-align: center;
+}
+
+.auth-card__text {
+  margin: 0 5px 0 5px;
+}
+
+.auth-card__title {
+  font-size: 28px;
+  line-height: 42px;
+}
+
+.auth-card__btn {
+  text-align: end;
+  margin-right: 5px;
+}
+
+.dialog__text-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  color: $teal-500;
+  border: none;
+  cursor: pointer;
+  outline: 0;
+  transition: all .2s ease-out;
+  font-size: 14px;
+  margin: 0 5px 0 5px;
+
+  &:hover:not([disabled="disabled"]) {
+    color: $teal-600;
+  }
+
+  &[disabled="disabled"] {
+    opacity: 0.5;
+  }
+}
+
+.dialog-form__row {
+  margin: 0 5px 0 5px;
+  display: flex;
+  justify-content: start;
+}
