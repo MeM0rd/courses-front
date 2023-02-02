@@ -14,7 +14,8 @@ const routes: Array<RouteConfig> = [
   {
     path: '/subscription',
     name: 'subscription',
-    component: Subscription
+    component: Subscription,
+    props: (route) => ({query: route.query})
   }
 ]
 

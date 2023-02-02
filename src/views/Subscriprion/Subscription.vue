@@ -1,5 +1,10 @@
 <template>
   <div>
+    <div>
+      <subscription-menu
+          @search="doSearch"
+      />
+    </div>
     <subscription-table
         :subscriptions="subscriptionsData"
         @save="submitSaveSubscriptions"

@@ -10,10 +10,6 @@ import Subscription from "@/adapters/Subscription";
 export default class SubscriptionRow extends Vue {
     @Prop() subscriptions!: Subscription;
 
-    @Watch('subscriptions') jdsksjd() {
-        console.log(this.subscriptions);
-    }
-
     click() {
         const data = {
             'id': this.subscriptions.id,

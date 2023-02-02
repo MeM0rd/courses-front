@@ -2,12 +2,13 @@ import Vue from 'vue';
 import {Component} from 'vue-property-decorator';
 import SubscriptionTable from '@/components/SubscriptionTable/SubscriptionTable.vue';
 import SubscriptionAdapter from "@/adapters/Subscription";
+import SubscriptionMenu from '@/components/SubscriptionMenu/SubscriptionMenu.vue'
 import {userMapper} from "@/store/user";
 import {Raw} from "@/@types/Raw";
 
 const Mapper = Vue.extend({
     methods: {
-        ...userMapper.mapActions(['getStatus', 'loginByEmail','getSubscriptions', 'saveSubscriptions'])
+        ...userMapper.mapActions(['getStatus', 'loginByEmail','getSubscriptions', 'saveSubscriptions','searchSubscription'])
     },
     computed: {
         ...userMapper.mapGetters(['subscriptionsData']),
@@ -17,7 +18,8 @@ const Mapper = Vue.extend({
 
 @Component({
     components: {
-        SubscriptionTable
+        SubscriptionTable,
+        SubscriptionMenu,
     }
 })
 export default class Subscription extends Mapper {
@@ -28,13 +30,15 @@ export default class Subscription extends Mapper {
             const data = {
                 'user_id': 1
             };
-            this.getSubscriptions(data).then(() => {
-                console.log(1);
-            })
+            this.getSubscriptions(data).then()
         });
     }
 
-    submitSaveSubscriptions(data: Raw) {
+    private submitSaveSubscriptions(data: Raw) {
         this.saveSubscriptions(data).then()
+    }
+
+    private doSearch(data: string) {
+        this.searchSubscription(data).then()
     }
 }

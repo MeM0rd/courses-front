@@ -43,14 +43,23 @@ export default class UserActions extends ApiActions<UserState, UserGetters, User
             .then((response) => {
                 const subs = response.data.data ? Subscription.fromRaw(response.data.data) : null;
                 this.state.subscriptions = response.data.data;
-                console.log(this.state.subscriptions);
             });
     }
 
     saveSubscriptions(data: Raw) {
         return this.api.subscription.saveSubscriptions(data)
+            .then()
+    }
+
+    searchSubscription(searchText: string) {
+        const data = {
+            text: searchText,
+            userId: 1
+        }
+
+        return this.api.subscription.searchSubscription(data)
             .then((response) => {
-                console.log(response)
-            })
+                this.state.subscriptions = response.data.data;
+        })
     }
 }

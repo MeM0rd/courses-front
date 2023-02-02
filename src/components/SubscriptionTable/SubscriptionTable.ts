@@ -18,9 +18,5 @@ const headers = [
 export default class SubscriptionTable extends Vue {
     @Prop() subscriptions!: Array<Subscription>;
 
-    @Watch('subscriptions') jdsksjd() {
-        console.log(this.subscriptions);
-    }
-
     private headers = headers;
 }

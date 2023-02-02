@@ -1,5 +1,6 @@
 import { AxiosPromise } from 'axios';
 import AbstractApi from '@/api/modules/abstract-api';
+import SearchData from '@/adapters/SearchData';
 import { Raw } from '@/@types/Raw';
 import axios from 'axios';
 
@@ -8,10 +9,19 @@ axios.defaults.baseURL = apiUrl;
 
 export default class SubscriptionApi extends AbstractApi {
     getSubscriptions(data: Raw): AxiosPromise {
-        return this.api.post('subscription/', data)
+        return this.api.post('subscription/', data);
     }
 
     saveSubscriptions(data: Raw): AxiosPromise {
-        return this.api.post('subscription/save', data)
+        return this.api.post('subscription/save', data);
+    }
+
+    searchSubscription(data: SearchData): AxiosPromise {
+        return this.api.get('subscription/search', {
+            params: {
+                text: data.text,
+                user_id: data.userId
+            }
+        });
     }
 }
