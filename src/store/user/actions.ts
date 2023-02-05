@@ -56,10 +56,16 @@ export default class UserActions extends ApiActions<UserState, UserGetters, User
             text: searchText,
             userId: 1
         }
-
         return this.api.subscription.searchSubscription(data)
             .then((response) => {
                 this.state.subscriptions = response.data.data;
         })
+    }
+
+    deleteSubscription(data: Subscription) {
+        return this.api.subscription.deleteSubscription(data)
+            .then((response) => {
+                this.state.subscriptions = response.data.data;
+            })
     }
 }

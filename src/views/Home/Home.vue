@@ -1,7 +1,7 @@
 <template>
   <div class="text-center">
     <div class="mt-5">
-      <h1>Привет! Рад видеть, что вы считаете</h1>
+      <h1>Привет! Рад видеть, что вы считаете своё</h1>
     </div>
 
     <div class="mt-10">

@@ -1,6 +1,13 @@
 import Vue from "vue";
-import {Component, Prop, Watch} from "vue-property-decorator";
+import {Component, Prop} from "vue-property-decorator";
 import Subscription from "@/adapters/Subscription";
+import {CurrencyType} from "@/@types/CurrencyType";
+
+const items = [
+    CurrencyType.RUBLE,
+    CurrencyType.DOLLAR,
+    CurrencyType.EURO,
+]
 
 @Component({
     components: {
@@ -10,7 +17,9 @@ import Subscription from "@/adapters/Subscription";
 export default class SubscriptionRow extends Vue {
     @Prop() subscriptions!: Subscription;
 
-    click() {
+    private items = items;
+
+    private saveRow() {
         const data = {
             'id': this.subscriptions.id,
             'user_id': 1,
@@ -21,5 +30,14 @@ export default class SubscriptionRow extends Vue {
         };
 
         this.$emit('save', data);
+    }
+
+    private deleteRow() {
+        const data = {
+            'id': this.subscriptions.id,
+            'user_id': 1,
+        }
+
+        this.$emit('delete', data)
     }
 }

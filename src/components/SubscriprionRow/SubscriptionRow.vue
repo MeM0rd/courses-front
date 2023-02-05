@@ -1,27 +1,51 @@
 <template>
   <tr>
     <td>
-      {{subscriptions.name}}
+      {{ subscriptions.name }}
     </td>
 
     <td>
-      {{subscriptions.cost}}
+      {{ subscriptions.cost }}
     </td>
 
     <td>
-      {{subscriptions.currency}}
+      <div class="pt-6">
+        <v-combobox
+            v-model="subscriptions.currency"
+            :items="items"
+            chips
+            hide-selected
+            outlined
+            height="56px"
+        >
+        </v-combobox>
+      </div>
     </td>
 
     <td>
-      <v-text-field
-          v-model="subscriptions.note"
-      />
+      <div class="pt-6">
+        <v-text-field
+            v-model="subscriptions.note"
+            outlined
+
+        />
+      </div>
     </td>
-    <td>
+    <td class="text-end">
       <v-btn
-          @click.prevent="click"
+          @click.prevent="saveRow"
+          class="subscription-row__btn"
+          outlined
       >
-        Хай
+        Сохранить
+      </v-btn>
+      <v-btn
+          @click.prevent="deleteRow"
+          class="subscription-row__btn"
+          color="red"
+          outlined
+      >
+        Удалить
       </v-btn>
     </td>
   </tr>

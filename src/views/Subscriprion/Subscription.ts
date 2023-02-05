@@ -8,7 +8,7 @@ import {Raw} from "@/@types/Raw";
 
 const Mapper = Vue.extend({
     methods: {
-        ...userMapper.mapActions(['getStatus', 'loginByEmail','getSubscriptions', 'saveSubscriptions','searchSubscription'])
+        ...userMapper.mapActions(['getStatus', 'loginByEmail','getSubscriptions', 'saveSubscriptions','searchSubscription','deleteSubscription'])
     },
     computed: {
         ...userMapper.mapGetters(['subscriptionsData']),
@@ -34,11 +34,19 @@ export default class Subscription extends Mapper {
         });
     }
 
-    private submitSaveSubscriptions(data: Raw) {
-        this.saveSubscriptions(data).then()
+    private doSaveOrCreate(data: Raw) {
+        this.saveSubscriptions(data).then(() => {
+            this.$router.go(0);
+        })
     }
 
     private doSearch(data: string) {
         this.searchSubscription(data).then()
+    }
+
+    private doDelete(data: SubscriptionAdapter) {
+        this.deleteSubscription(data).then(() => {
+            this.$router.go(0);
+        })
     }
 }

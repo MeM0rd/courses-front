@@ -9,6 +9,7 @@
         <subscription-row
             :subscriptions="item"
             @save="$emit('save', $event)"
+            @delete="$emit('delete', $event)"
         />
       </template>
     </v-data-table>

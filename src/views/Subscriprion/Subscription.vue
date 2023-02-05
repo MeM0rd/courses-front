@@ -3,11 +3,13 @@
     <div>
       <subscription-menu
           @search="doSearch"
+          @create="doSaveOrCreate"
       />
     </div>
     <subscription-table
         :subscriptions="subscriptionsData"
-        @save="submitSaveSubscriptions"
+        @save="doSaveOrCreate"
+        @delete="doDelete"
     />
   </div>
 </template>

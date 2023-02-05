@@ -18,13 +18,9 @@
       </v-btn>
     </div>
     <div>
-      <v-btn
-          plain
-          outlined
-          color="primary"
-      >
-        Добавить ряд
-      </v-btn>
+      <add-row-modal
+          @create="$emit('create', $event)"
+      />
     </div>
   </div>
 </template>

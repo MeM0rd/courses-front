@@ -2,7 +2,7 @@
   <v-app-bar app class="app-bar">
     <div class="flex-center">
       <div class="heading">
-        Считай!
+        Считай своё!
       </div>
 
       <div style="position: absolute; right: 2%">

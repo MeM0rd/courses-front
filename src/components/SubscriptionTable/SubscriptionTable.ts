@@ -8,6 +8,7 @@ const headers = [
     {text: 'Стоимость', value: 'cost'},
     {text: 'Валюта', value: 'currency'},
     {text: 'Заметки', value: 'note', sortable: false},
+    {text: '', sortable: false},
 ];
 
 @Component({
